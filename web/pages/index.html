@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WeChat</title>
+    <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="../css/emoji.css">
+</head>
+
+<body>
+    <div class="alert"></div>
+    <!-- <div id="img_container">
+        <img src="" alt="" class="screen" id="img1" />
+        <div class="screen_btn_wrap">
+            <button id="screen_delete">取消</button>
+            <button id="screen_confirm">确认</button>
+        </div>
+    </div> -->
+    <!-- 创群窗口 -->
+    <div class="group_container">
+        <h3>创建群</h3>
+        <div class="search_wrap">
+            <span>群名:</span>
+            <input class="group_name" type="text" placeholder="输入群名" />
+        </div>
+        <h4>请选择要进群的好友</h4>
+        <ul class="group_member">
+            <!-- <li data-id="1">
+                <input class="group_members" type="checkbox"/>
+                <span>xhw</span>
+            </li> -->
+        </ul>
+        <div class="btn_wrap">
+            <button class="btn_cancel cancel_group">取消</button>
+            <button class="btn_confirm create_group">确认</button>
+        </div>
+    </div>
+    <!-- 添加好友窗口 -->
+    <div id="friends_container">
+        <h3>添加好友</h3>
+        <div class="search_wrap">
+            <input class="search_content" type="text" placeholder="输入关键字以搜索" />
+            <button class="search_btn">搜索</button>
+        </div>
+        <ul class="search_result">
+            <!-- <li data-id="1">xhw</li> -->
+        </ul>
+        <div class="btn_wrap">
+            <button class="btn_cancel cancel_friend">取消</button>
+            <button class="btn_confirm add_friend">添加</button>
+        </div>
+    </div>
+    <!-- 聊天内容 -->
+    <div class="user_container">
+        <div class="user_info">
+            <div class="user_msg">
+                <img class="user_header" src="../img/head.jpg" alt="">
+                <span class="user_name">无情杀手</span>
+            </div>
+            <ul class="add_wrap">
+                <li class="add_friends">+好友</li>
+                <li class="add_group">创群</li>
+            </ul>
+            <h3>好友</h3>
+            <ul id="online_users" class="user_list">
+<!--                <li data-fid=${msg.id}>-->
+<!--                    <span>${msg.username}</span>-->
+<!--                    <i>(离线)</i>-->
+<!--                    <strong>×</strong>-->
+<!--                </li>-->
+<!--                <li data-fid=${msg.id}>-->
+<!--                    <span>${msg.username}</span>-->
+<!--                    <i>(离线)</i>-->
+<!--                    <strong>×</strong>-->
+<!--                </li>-->
+            </ul>
+            <h3>群组</h3>
+            <ul class="user_list" id="group_list">
+                <!-- <li>
+                    <img src="" alt="">
+                    <span>无情杀手</span>
+                </li> -->
+            </ul>
+        </div>
+        <div class="chat_container">
+            <div class="chat_top">
+                <h3 id="chat_obj">聊天对象</h3>
+                <div id="member_more" class="member_more">
+                    <strong>>></strong>
+                      <!-- 群成员查看 -->
+                      <div class="member_check">
+                          <h4>群成员</h4>
+                          <ul id="group_member">
+                            <!-- <li>xhwdddddxxxdd</li>
+                            <li>xhwdddddxxxdd</li> -->
+                          </ul>
+                      </div>
+                </div>
+            </div>
+            <div class="chat_msg">
+                <!-- <div class="chat_tip">"baba"加入群聊</div>
+                <div class="chat_tip">"baba"离开聊天室</div>
+                <div class="my_msg">
+                    <div class="my_say">
+                        hello
+                    </div>
+                    <img class="my_head" src="./images/head0.jpg" alt="">
+                </div>
+                <div class="other_msg">
+                    <img class="other_head" src="./images/head0.jpg" alt="">
+                    <div class="other_say_row">
+                        <i class="other_name">小红</i>
+                        <div class="other_say">我很好</div>
+                    </div>
+                </div> -->
+                <!-- 你好吗gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg -->
+            </div>
+            <div class="chat_input">
+                <div class="chat_item">
+                    <div class="emoji_container">
+                        <div title="表情包" id="face_emoji">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" id="face" class="feather feather-smile">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                            </svg>
+                        </div>
+                        <div class="faceNav"></div>
+                    </div>
+                    <div title="截屏">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            id="screen" class="feather feather-scissors">
+                            <circle cx="6" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                            <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                            <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <label for="file" title="图片">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-folder">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                </path>
+                            </svg>
+                        </label>
+                        <input id="file" type="file" accept=".jpg,.png" style="display:none">
+                    </div>
+                </div>
+                <div class="chat_content">
+                    <!-- 添加contenteditable属性 -->
+                    <div id="content" contenteditable></div>
+                </div>
+                <div class="chat_btn_wrap">
+                    <button id="chat_btn">发 送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/html2canvas.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../utils/utils.js"></script>
+    <script src="../js/chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+@import 'reset.css';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/night.jpg);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    /* background-color: #5353c6; */
+    overflow: hidden;
+    /* animation: star 20s linear infinite; */
+    background-size: 100% 100%;
+}
+
+@keyframes star {
+    0% {
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    25% {
+        background-position: left top;
+        background-size: 125% 125%;
+    }
+
+    50% {
+        background-position: center;
+        background-size: 150% 150%;
+    }
+
+    75% {
+        background-position: right bottom;
+        background-size: 125% 125%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+        background-position: center;
+    }
+}
+
+
+.reg_content,
+.lg_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    min-height: 400px;
+    background-image: linear-gradient(135deg, rgba(83, 83, 198, 0.5), rgba(216, 136, 236, 0.5));
+    border-radius: 15px;
+    padding: 20px 0;
+    transform: none;
+    z-index:10;
+    /* animation: star2 10s linear infinite; */
+}
+
+.reg_content {
+    display: none;
+}
+
+.reg_content h1,
+.lg_content h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 25px 0 15px;
+    color: rgb(216, 136, 236);
+    border-bottom: 1px dashed rgb(216, 136, 236);
+}
+
+.reg_content>div,
+.lg_content>div {
+    margin: 10px 0;
+    display: flex;
+    padding: 0 15px;
+}
+
+
+.lg_user,
+.lg_key,
+.reg_email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lg_user>div,
+.lg_key>div,
+.reg_email>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lg_user svg,
+.lg_key svg,
+.reg_email svg {
+    margin-right: 15px;
+}
+
+.lg_user i,
+.lg_key i,
+.reg_email i {
+    font-size: 25px;
+    font-weight: bold;
+    color: #c550e2;
+}
+
+.lg_user span,
+.lg_key span,
+.reg_email span {
+    font-size: 25px;
+    color: #c550e2;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+.lg_user input,
+.lg_key input,
+.reg_email input {
+    width: 200px;
+    height: 25px;
+}
+
+.lg_select {
+    justify-content: center;
+    align-items: center;
+}
+
+.lg_select input {
+    margin-right: 5px;
+}
+
+.lg_select label {
+    font-size: 16px;
+    color: #ffccff;
+}
+
+.lg_btn_wrap {
+    justify-content: center;
+    text-align: center;
+}
+
+.lg_tip {
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lg_tip span {
+    transition: all .3s;
+    color: #fff;
+}
+
+.lg_tip span:hover {
+    color: #ffccff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.lg_btn_wrap button {
+    font-size: 20px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    color: #5353c6;
+    font-weight: bold;
+    background-image: linear-gradient(135deg, #ffccff, #8a8fff);
+    transition: 0.3s;
+}
+
+.lg_btn_wrap button:hover {
+    width: 150px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #ffccff, #8a8fff);
+}
+
+.star_container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    /* width: 3px;
+    height: 3px; */
+    background: white;
+    border-radius: 50%;
+    animation: star 2s linear infinite;
+}
+
+@keyframes star {
+    0%,100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .2;
+        transform: scale(1.2);
+    }
+}
+
+.meteor {
+    position: absolute; 
+    border: solid;
+    border-width: 2px 0 2px 0;
+    /*流星随长度逐渐缩小*/
+    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+    border-radius: 2px 0 0 2px;
+    transform: rotate(-45deg);
+    transform-origin: 0 0 0;
+    box-shadow: 0 0 20px rgba(255, 255, 255, .3);
+}
+

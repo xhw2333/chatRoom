@@ -1,0 +1,100 @@
+* {
+    padding:0;
+    margin:0;
+    font-family: arial;
+}
+a {
+    text-decoration:none;
+}
+ul,
+li {
+    list-style:none;
+}
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.clearfix::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+img {
+    border:none;
+    vertical-align:middle;
+    /* eg.div引入img下端会有空隙，加这就不会 */
+}
+.tcell {
+    display:table-cell;
+}
+
+.layer {
+    width:1200px;
+    margin:0 auto;
+}
+table {
+    /* 边框模式 ：合并*/
+    border-collapse: collapse;
+}
+input,
+button {
+    outline:none;
+    border-radius: 5px;
+    border: none;
+    text-indent: 3px;
+}
+i {
+    font-style:normal;
+}
+em {
+    font-style: normal;
+}
+
+.reds{
+    background-color: red;
+}
+
+.oranges {
+    background-color: orange;
+}
+
+.yellows {
+    background-color: yellow;
+}
+
+.greens {
+    background-color: green;
+}
+
+.sky {
+    background-color: skyblue;
+}
+
+.blues {
+    background-color: blue;
+}
+
+.purples {
+    background-color: purple;
+}
+
+.browns {
+    background-color: brown;
+}
+
+.alert {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 80px;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    display: none;
+    line-height: 80px;
+    text-align: center;
+}
